@@ -1,0 +1,495 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-size: cover; /* Cover the entire screen */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: center; /* Center the image */
+    background-attachment: fixed; /* Keep the image fixed when scrolling */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    max-width: 90%;
+    width: 100%;
+    margin: 20px auto;
+}
+
+/* Container for all content */
+body#indexPage {
+    background-image: url("3179875.jpg");
+}
+
+
+
+body#quizPage {
+    background-image: url("93210.jpg");
+}
+
+body#resultsPage {
+    background-image: url("retro-vhs-packaging-indoors.jpg");
+}
+
+#welcome {
+    font-size: 2.5em;
+    color: hsl(22, 100%, 56%);
+    font-weight: bolder;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Form Styling */
+#quizForm {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Label Styling */
+#favType {
+    font-size: 1.4em;
+    color: hsl(220, 90%, 55%);
+    margin-bottom: 10px;
+    display: block;
+    font-weight: bold;
+}
+/* Difficulty Paragraph Styling */
+#difficulty {
+    font-size: 1.4em;
+    color: hsl(326, 69%, 31%);
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+
+/* Select dropdowns styling */
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    background-color: #feffe4;
+    font-size: 1.3em;
+    color: rgb(0, 88, 165);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    font-family:serif;
+}
+#No {
+    font-size: 1.4em;
+    color:rgb(148, 135, 41);
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Input field styling */
+#questionsNO {
+    width: 97%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    background-color: #feffe4;
+    font-size: 1.3em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: rgb(0, 88, 165);
+    font-weight: bold;
+    font-family:serif;
+
+}
+/* Button styling */
+#startBtn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color:orange;
+    color: #ffffff;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#startBtn:hover {
+    background-color: rgb(249, 181, 54);
+    transform: translateY(-2px);
+}
+
+#startBtn:active {
+    background-color: rgb(198, 132, 9);
+    transform: translateY(0);
+}
+
+
+
+
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    h1, #welcome, #quizHead {
+        font-size: 2em;
+    }
+
+    .question {
+        font-size: 1.5em;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    select, input[type="number"] {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .panel1 {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1, #welcome, #quizHead {
+        font-size: 1.8em;
+    }
+
+    .question {
+        font-size: 1.3em;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    select, input[type="number"] {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .panel1 {
+        padding: 10px;
+    }
+}
+
+
+#quizForm {
+    padding: 20px;
+    margin: 5px 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+}
+/* Feedback styles */
+.feedback {
+    font-weight: bold;
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    color: #ffffff;
+}
+
+.correct {
+    background-color: green;
+}
+
+.incorrect {
+    background-color: red;
+}
+
+/* Panel and container styling */
+.panel1 {
+    background-image: linear-gradient(135deg, rgba(243, 235, 235, 0.9), rgba(65, 52, 52, 0.8));
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 800px;
+    margin: 40px 20px;
+}
+
+
+/* Question styling */
+.question {
+    font-size: 2em;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: hsl(0, 100%, 56%);
+}
+
+/* Option styling */
+.options input {
+    margin-right: 10px;
+    transform: scale(1.5);
+    vertical-align: middle;
+}
+
+#choicesLabel {
+    padding: 5px;
+    margin: 10px 0;
+    font-size: 1.4em;
+    color: hsl(201, 74%, 70%);
+    font-weight: bold;
+}
+
+/* Score, question number, and timer styling */
+#score, #quesionsNo, #time {
+    margin-top: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#time {
+    color: #ae0000;
+}
+
+#quizHead {
+    font-size: 2.3em;
+    color: #ffffff;
+}
+#finalScore {
+    font-size: 2em;
+    color: hsl(220, 90%, 55%);
+    margin-bottom: 20px;
+    text-align: center;
+}
+.button-container {
+    display: flex;
+    flex-direction: column; /* Stack the buttons vertically */
+    align-items: center; /* Center the buttons horizontally */
+    gap: 5px; /* Space between buttons */
+    margin-top: 80px; /* Space above the buttons */
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 4px 4px;
+}
+
+/* Button styling */
+button#backToMenu1,
+button#resetGame1 {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: hsl(204, 100%, 31%);
+    color: #ffffff;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 200px; /* Fixed width for consistency */
+    text-align: center;
+}
+
+button#backToMenu1:hover,
+button#resetGame1:hover {
+    background-color:  hsl(204, 67%, 34%);
+    transform: translateY(-2px);
+}
+
+button#backToMenu1:active,
+button#resetGame1:active {
+    background-color: hsl(204, 100%, 19%);
+    transform: translateY(0);
+}
+/* Question container */
+
+
+/* Option styling */
+.options input {
+    margin-right: 10px;
+    transform: scale(1.5);
+    vertical-align: middle;
+}
+
+#choicesLabel {
+    padding: 5px;
+    margin: 10px 0;
+    font-size: 1.4em;
+    color: hsl(201, 100%, 46%);
+    font-weight: bold;
+    display: inline-block;
+}
+
+/* Submit and Finish buttons */
+button#submitBtn1,
+button#finish {
+    width: 48%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: orangered;
+    color: #ffffff;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 10px;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+button#submitBtn1:hover,
+button#finish:hover {
+    background-color: rgb(255, 101, 45);
+    transform: translateY(-2px);
+}
+
+button#submitBtn1:active,
+button#finish:active {
+    background-color: rgb(188, 78, 38);
+    transform: translateY(0);
+}
+
+/* Timer styling */
+#time {
+    font-size: 1.3em;
+    color: #ff0a0a;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Score and question number styling */
+#score, #questionsNo2 {
+    font-size: 1.2em;
+    margin-top: 10px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+/* Feedback styles */
+.feedback {
+    font-weight: bold;
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    color: #ffffff;
+}
+
+.correct {
+    background-color: green;
+}
+
+.incorrect {
+    background-color: red;
+}
+#finH1{
+    color: #530000;
+    font-size: 2em;
+}
+/* General body styling */
+/* General body styling */
+body#resultsPage {
+    font-family: Arial, sans-serif;
+    background-image: url("retro-vhs-packaging-indoors.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 20px; /* Adds padding for smaller screens */
+}
+
+/* Panel styling */
+.panel3 {
+    background-image: linear-gradient(135deg, rgba(241, 172, 128, 0.9), rgba(10, 120, 222, 0.8));
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 500px;
+    text-align: center; /* Centering text and elements within the panel */
+    margin: 20px ;
+}
+
+/* Heading styling */
+#finH1 {
+    font-size: 2.81em;
+    color: hsl(57, 100%, 50%);
+    margin-bottom: 25px;
+    font-weight: bolder;
+}
+
+/* Final Score styling */
+#finalScore {
+    font-size: 1.5em;
+    color: hsl(220, 100%, 50%);
+    margin-bottom: 25px;
+    font-weight: bold; /* Enhances the visibility of the score */
+}
+
+/* Button styling */
+#resetGame2,
+#backToMenu2 {
+    width: 45%; /* Adjusted for better inline layout */
+    padding: 12px;
+    margin: 10px 2%; /* Adjusted for better spacing between buttons */
+    border: none;
+    border-radius: 5px;
+    background-color: #ff0707;
+    color: #ffffff;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block; /* Ensures buttons are inline */
+    text-align: center; /* Centers the button text */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Adds a slight shadow for depth */
+}
+
+#resetGame2:hover,
+#backToMenu2:hover {
+    background-color: #fe2d2d;
+    transform: translateY(-2px);
+}
+
+#resetGame2:active,
+#backToMenu2:active {
+    background-color: #b91010;
+    transform: translateY(0);
+}
+
+/* Adjusting for smaller screens */
+@media (max-width: 480px) {
+    #resetGame2,
+    #backToMenu2 {
+        width: 100%; /* Stacks buttons on smaller screens */
+        margin: 10px 0;
+    }
+
+    #finH1 {
+        font-size: 2.4em; /* Adjusts heading size for smaller screens */
+    }
+
+    #finalScore {
+        font-size: 1.5em; /* Adjusts final score size for smaller screens */
+    }
+}
+
+
+footer {
+    margin-top: auto; /* Pushes footer to the bottom */
+    padding: 10px;
+    text-align: center;
+    color: hsl(14, 100%, 91%);
+    background: rgba(255, 255, 255, 0.1); /* Transparent background */
+    font-size: 1.3em;
+}
+header {
+    font-size: 3em;
+    font-family: 'Times New Roman', Times, serif;
+    color: hsl(59, 83%, 52%);
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 2px solid hsl(59, 83%, 52%); /* Underline */
+}
