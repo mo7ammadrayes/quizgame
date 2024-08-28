@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizMaster</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="indexPage">
+    <header id="welcome">QuizMaster gmae</header>
+    <form id="quizForm">
+        <label for="types" id="favType">Choose your favorite type:</label>
+        <select id="types" name="from" required>
+            <option value="">Please select</option>
+        </select>
+        
+        <p id="difficulty">Choose the difficulty level:</p>
+        <select id="difficulty2" name="difficulty" required>
+            <option value="">Please select</option>
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+        </select>
+    
+        <p id="No">Enter how many questions you want to answer:</p>
+        <input type="number" id="questionsNO" name="questionsNO" min="0" max="30" 
+         placeholder="Enter the questions number here" required>
+        
+        <button type="submit" id="startBtn">Start Quiz</button>
+        <button onclick="window.location.href = 'index.html';" id="backToWelcome">Back to the main page</button>
+
+    </form>
+    <footer>all questions & answers from the Open Trivia DB  </footer>
+    <script src="index.js"></script>
+</body>
+</html>

@@ -28,7 +28,7 @@ typeHtml.textContent=type
     });
 
     document.getElementById("backToMenu1").addEventListener("click", () => {
-        window.location.href = 'welcome.html'; // Redirect to the main menu
+        window.location.href = 'index.html'; // Redirect to the main menu
     });
 
 }
@@ -190,7 +190,7 @@ function setupResultsPage() {
     });
 
     document.getElementById("backToMenu2").addEventListener("click", () => {
-        window.location.href = 'welcome.html'; // Redirect to the main menu
+        window.location.href = 'index.html'; // Redirect to the main menu
     });
 }
 document.addEventListener("DOMContentLoaded", function() {

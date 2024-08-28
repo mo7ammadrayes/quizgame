@@ -26,7 +26,7 @@ function setupQuizPage() {
     });
 
     document.getElementById("backToMenu1").addEventListener("click", () => {
-        window.location.href = 'welcome.html'; // Redirect to the main menu
+        window.location.href = 'index.html'; // Redirect to the main menu
     });
 }
 
@@ -167,7 +167,7 @@ function setupResultsPage() {
 
     const backToMenu = document.getElementById("backToMenu2");
     backToMenu.addEventListener("click", () => {
-        window.location.href = 'welcome.html';
+        window.location.href = 'index.html';
     });
 }
 

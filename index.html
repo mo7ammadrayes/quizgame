@@ -3,34 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QuizMaster</title>
+    <title>Document</title>
     <link rel="stylesheet" href="style.css">
-</head>
-<body id="indexPage">
-    <header id="welcome">QuizMaster gmae</header>
-    <form id="quizForm">
-        <label for="types" id="favType">Choose your favorite type:</label>
-        <select id="types" name="from" required>
-            <option value="">Please select</option>
-        </select>
-        
-        <p id="difficulty">Choose the difficulty level:</p>
-        <select id="difficulty2" name="difficulty" required>
-            <option value="">Please select</option>
-            <option value="easy">Easy</option>
-            <option value="medium">Medium</option>
-            <option value="hard">Hard</option>
-        </select>
-    
-        <p id="No">Enter how many questions you want to answer:</p>
-        <input type="number" id="questionsNO" name="questionsNO" min="0" max="30" 
-         placeholder="Enter the questions number here" required>
-        
-        <button type="submit" id="startBtn">Start Quiz</button>
-        <button onclick="window.location.href = 'welcome.html';" id="backToWelcome">Back to the main page</button>
-
-    </form>
-    <footer>all questions & answers from the Open Trivia DB  </footer>
-    <script src="index.js"></script>
+<body id="welcomePage">
+    <div class="panel"><h1 id="welcomeH1">Welcome to the QuizMaster gmae</h1>
+    <div class="button-container">
+        <button id="arabic" onclick="window.location.href = 'indexArabic.html';">Arabic</button>
+        <button id="english" onclick="window.location.href = 'indexEnglish.html';">English</button>
+    </div>
+</div>
 </body>
 </html>
