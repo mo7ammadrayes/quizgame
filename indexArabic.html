@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizMaster</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="indexArabicPage">
+    <header id="welcome">QuizMaster gmae</header>
+    <form id="quizForm">
+     
+        <p id="No">:اختر عدد الاسئلة التي تريد الجواب عليها </p>
+        <input type="number" id="questionsNO" name="questionsNO" min="0" max="30" 
+         placeholder="ادخل عدد الاسئلة " required>
+        
+        <button type="submit" id="startBtn">ابدء</button>
+        <button onclick="window.location.href = 'welcome.html';" id="backToWelcome">العودة للصفحة الرئيسة</button>
+
+    </form>
+    <script src="index.js"></script>
+</body>
+</html>

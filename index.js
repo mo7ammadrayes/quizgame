@@ -1,9 +1,14 @@
 const questionsNO=document.getElementById("questionsNO")
 const difficulty=document.getElementById("difficulty2")
 const startBtn= document.getElementById('startBtn')
-
 document.addEventListener("DOMContentLoaded", function() {
- setupIndexPage();
+    const currentPage = document.body.id;
+
+    if (currentPage === "indexPage") {
+        setupIndexPage()
+    } else if (currentPage === "indexArabicPage") {
+        setupArabicIndexPage() 
+       }
 });
 
 async function setupIndexPage() {
@@ -68,6 +73,53 @@ async function fetchQuestions(categoryId, difficulty, amount) {
 
         } else {
             console.error('No questions found for the specified parameters.');
+            throw new Error('No questions found');
+        }
+    } catch (error) {
+        console.error('Error fetching questions:', error);
+        throw error;
+    }
+}
+async function setupArabicIndexPage() {
+    console.log("Arabic Index page loaded");
+    const startBtn = document.getElementById('startBtn');
+
+    startBtn.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent the form from submitting
+        const questionsNo = document.getElementById('questionsNO').value;
+
+        // Ensure questionsNo is a valid number within the expected range
+        if (questionsNo && questionsNo > 0 && questionsNo <= 30) {
+            fetchArabicQuestions(questionsNo).then(() => {
+                window.location.href = 'arabicQuiz.html'; // Redirect to Arabic quiz page
+            }).catch(error => {
+                console.error('Error:', error);
+                alert('Failed to fetch questions. Please try again.');
+            });
+        } else {
+            alert("اختر رقم بين صفر و ثلاثون");
+        }
+    });
+}
+
+
+async function fetchArabicQuestions(questionsNo) {
+    const questionsAPI = 'arabicQuestions.json'; // Assuming questions.json is your local JSON file
+    try {
+        const response = await fetch(questionsAPI);
+        const data = await response.json();
+
+        if (data && data.length > 0) {
+            // Shuffle the questions array
+            const shuffledQuestions = data.sort(() => 0.5 - Math.random());
+            
+            // Slice the array to get the desired number of questions
+            const selectedQuestions = shuffledQuestions.slice(0, questionsNo);
+            
+            // Store the selected questions in localStorage
+            localStorage.setItem('arabicQuizQuestions', JSON.stringify(selectedQuestions));
+        } else {
+            console.error('No questions found in the JSON file.');
             throw new Error('No questions found');
         }
     } catch (error) {

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body id="indexPage">
-    <header id="welcome">Welcome to the QuizMaster gmae</header>
+    <header id="welcome">QuizMaster gmae</header>
     <form id="quizForm">
         <label for="types" id="favType">Choose your favorite type:</label>
         <select id="types" name="from" required>
@@ -27,6 +27,8 @@
          placeholder="Enter the questions number here" required>
         
         <button type="submit" id="startBtn">Start Quiz</button>
+        <button onclick="window.location.href = 'welcome.html';" id="backToWelcome">Back to the main page</button>
+
     </form>
     <footer>all questions & answers from the Open Trivia DB  </footer>
     <script src="index.js"></script>

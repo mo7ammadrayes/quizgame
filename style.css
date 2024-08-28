@@ -21,18 +21,22 @@ body {
 }
 
 /* Container for all content */
-body#indexPage {
+body#indexPage,body#indexArabicPage {
     background-image: url("3179875.jpg");
 }
 
 
 
-body#quizPage {
+body#quizPage,body#arabicQuizPage {
     background-image: url("93210.jpg");
 }
 
-body#resultsPage {
+body#resultsPage,body#ArabicResultsPage {
     background-image: url("retro-vhs-packaging-indoors.jpg");
+}
+body#ArabicResultsPage,body#indexArabicPage ,body#arabicQuizPage {
+    direction: rtl;
+    text-align: right;
 }
 
 #welcome {
@@ -86,7 +90,7 @@ select {
 }
 #No {
     font-size: 1.4em;
-    color:rgb(148, 135, 41);
+    color:rgb(255, 42, 52);
     margin-bottom: 10px;
     font-weight: bold;
 }
@@ -112,7 +116,7 @@ select {
     padding: 12px;
     border: none;
     border-radius: 5px;
-    background-color:orange;
+    background-color:rgb(0, 94, 255);
     color: #ffffff;
     font-size: 18px;
     cursor: pointer;
@@ -120,17 +124,39 @@ select {
 }
 
 #startBtn:hover {
-    background-color: rgb(249, 181, 54);
+    background-color: rgb(18, 98, 236);
     transform: translateY(-2px);
 }
 
 #startBtn:active {
-    background-color: rgb(198, 132, 9);
+    background-color:rgb(19, 78, 179);
     transform: translateY(0);
 }
 
 
 
+#backToWelcome {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color:rgb(255, 25, 0);
+    color: #ffffff;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 10px;
+}
+
+#backToWelcome:hover {
+    background-color:rgb(195, 28, 9);
+    transform: translateY(-2px);
+}
+
+#backToWelcome:active {
+    background-color:rgb(242, 79, 61);
+    transform: translateY(0);
+}
 
 
 /* Media queries for responsive design */
@@ -208,7 +234,7 @@ select {
 
 /* Panel and container styling */
 .panel1 {
-    background-image: linear-gradient(135deg, rgba(243, 235, 235, 0.9), rgba(65, 52, 52, 0.8));
+    background-image: linear-gradient(135deg, rgb(255, 239, 239), rgba(236, 158, 129, 0.8));
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -233,13 +259,7 @@ select {
     vertical-align: middle;
 }
 
-#choicesLabel {
-    padding: 5px;
-    margin: 10px 0;
-    font-size: 1.4em;
-    color: hsl(201, 74%, 70%);
-    font-weight: bold;
-}
+
 
 /* Score, question number, and timer styling */
 #score, #quesionsNo, #time {
@@ -254,7 +274,7 @@ select {
 
 #quizHead {
     font-size: 2.3em;
-    color: #ffffff;
+    color: #050505;
 }
 #finalScore {
     font-size: 2em;
@@ -271,6 +291,7 @@ select {
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
     padding: 4px 4px;
+    margin-bottom: 10px;
 }
 
 /* Button styling */
@@ -313,7 +334,7 @@ button#resetGame1:active {
     padding: 5px;
     margin: 10px 0;
     font-size: 1.4em;
-    color: hsl(201, 100%, 46%);
+    color: hsl(232, 100%, 50%);
     font-weight: bold;
     display: inline-block;
 }
@@ -350,7 +371,7 @@ button#finish:active {
 /* Timer styling */
 #time {
     font-size: 1.3em;
-    color: #ff0a0a;
+    color: #c60b0b;
     margin-bottom: 10px;
     font-weight: bold;
 }
@@ -492,4 +513,67 @@ header {
     margin-bottom: 20px;
     text-align: center;
     border-bottom: 2px solid hsl(59, 83%, 52%); /* Underline */
+}
+
+#english,
+#arabic {
+    width: 45%; /* Adjusted for better inline layout */
+    padding: 12px;
+    margin: 10px 2%; /* Adjusted for better spacing between buttons */
+    border: none;
+    border-radius: 10px;
+    background-color: #f73e3e;
+    color: #ffffff;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block; /* Ensures buttons are inline */
+    text-align: center; /* Centers the button text */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Adds a slight shadow for depth */
+}
+
+#english:hover,
+#arabic:hover {
+    background-color:#a50000;
+    transform: translateY(-2px);
+}
+
+#english:active,
+#arabic:active {
+    background-color: #f73e3e;
+    transform: translateY(0);
+}
+#welcomeH1{
+    font-size: 3em;
+    font-family: 'Times New Roman', Times, serif;
+    color: hsl(233, 47%, 96%);
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 2px solid hsl(183, 72%, 63%); /* Underline */
+
+}
+.panel {
+    background-image: linear-gradient(135deg, rgba(138, 120, 255, 0.9), rgba(255, 111, 0, 0.8));
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 800px;
+    margin: 40px 20px;
+}
+
+body#welcomePage {
+    font-family: Arial, sans-serif;
+    background-image: url("5680736.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 20px; /* Adds padding for smaller screens */
 }
